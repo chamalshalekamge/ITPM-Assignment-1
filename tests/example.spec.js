@@ -28,14 +28,14 @@ const positiveTests = [
   {
     id: "Pos_4",
     description: "Convert mixed Singlish and English question",
-    input: "oya mage account eka update karala thiyenawada, and confirmation eka email karala thiyenawada?",
-    expected: "ඔයා මගේ account එක update කරලා තියෙනවාද, and confirmation එක email කරලා තියෙනවාද?"
+    input: "oyaa mage account eka update karalaa thiyenavaadha, and confirmation eka email karalaa thiyenavaadha?",
+    expected: "ඔයා mage account එක update කරලා තියෙනවාද, and confirmation එක email කරලා තියෙනවාද?"
   },
   {
     id: "Pos_5",
     description: "Convert informal instruction sentence",
     input: "hariyata balala form eka fill karala hari nam submit karanna",
-    expected: "හරියට බලලා form එක fill කරලා හරි නම් submit කරන්න"
+    expected: "හරියට බලල form එක fill කරල හරි නම් submit කරන්න"
   },
   {
     id: "Pos_6",
@@ -47,111 +47,110 @@ const positiveTests = [
     id: "Pos_7",
     description: "Convert technical sentence with English terms",
     input: "mama server eka restart karala logs tika check karala balannam",
-    expected: "මම server එක restart කරලා logs ටික check කරලා බලන්නම්"
+    expected: "මම server එක restart කරල logs ටික check කරල බලන්නම්"
   },
-  // {
-  //   id: "Pos_8",
-  //   description: "Convert sentence with numbers and system terms",
-  //   input: "mama adha 3 veni paarata try kala namuth system eka hariyata respond une nae",
-  //   expected: "මම අද 3 වෙනි පාරට try කල නමුත් system එක හරියට respond උනේ නෑ"
-  // },
-  // {
-  //   id: "Pos_9",
-  //   description: "Convert multiline paragraph input",
-  //   input: "mama report eka hadhanava.\noya data tika check karanava.\napi heta meeting eka thiyenava.",
-  //   expected: "මම report එක හදනව.\nඔය data ටික check කරනව.\nඅපි හෙට meeting එක තියෙනව."
-  // },
-  // {
-  //   id: "Pos_10",
-  //   description: "Convert sentence with plural nouns",
-  //   input: "students laa tika reports liyala submit karala thiyenava",
-  //   expected: "students ලා ටික reports ලියල submit කරල තියෙනව"
-  // },
-  // {
-  //   id: "Pos_11",
-  //   description: "Convert long daily-use sentence",
-  //   input: "adha udhe mama gedharin eliyata yanna kalin breakfast eka kanna amathaka una",
-  //   expected: "අද උදෙ මම ගෙදරින් එලියට යන්න කලින් breakfast එක කන්න අමතක උනා"
-  // },
-  // {
-  //   id: "Pos_12",
-  //   description: "Convert short phrase-pattern command",
-  //   input: "data tika hariyata check karanna",
-  //   expected: "data ටික හරියට check කරන්න"
-  // },
-  // {
-  //   id: "Pos_13",
-  //   description: "Convert mixed Singlish + English compound question",
-  //   input: "oya adha office ekata giye naethnam, meeting ekata online join karanna puluvanda kiyala ahanna , mokadha manager kivvā attendance very important kiyala, ehema nam please mata confirm karannako mokakdha hari plan eka?",
-  //   expected: "ඔය අද office එකට ගියෙ නැත්නම්, meeting එකට online join කරන්න පුලුවන්ඩ කියල අහන්න , මොකද manager කිව්ව්ā attendance very important කියල, එහෙම නම් please මට confirm කරන්නකො මොකක්ද හරි plan එක?"
-  // },
-  // {
-  //   id: "Pos_14",
-  //   description: "Convert greeting with document confirmation request",
-  //   input: "ayubovan oyaata, mama evva documents tika oyaata hariyata laebunadha kiyala ahanna",
-  //   expected: "අයුබොවන් ඔයාට, මම එව්ව documents ටික ඔයාට හරියට ලැබුනද කියල අහන්න"
-  // },
-  // {
-  //   id: "Pos_15",
-  //   description: "Convert Singlish complex question with names and place",
-  //   input: "Kamal Colombo giyaa kiyala kivvadha?",
-  //   expected: "ඛමල් Colombo ගියා කියල කිව්වද?"
-  // },
-  // {
-  //   id: "Pos_16",
-  //   description: "Convert Singlish sentence with tenses, numbers, and punctuation",
-  //   input: "oyaa dhaen office yanne naee, yesterday 2 meetings thibba, haebaei heta 3ta presentation eka karanna thiyenne, ee nisaa time eka hariyata plan karanna?",
-  //   expected: "ඔයා දැන් office යන්නෙ නෑ, yesterday 2 meetings තිබ්බ, හැබැඉ හෙට 3ට presentation එක කරන්න තියෙන්නෙ, ඒ නිසා time එක හරියට plan කරන්න?"
-  // },
-  // {
-  //   id: "Pos_17",
-  //   description: "Convert Singlish text with negation and formatting",
-  //   input: "oya ehema hithanne epaa api meeting eka cancel karala nae,haebaei dhaen plan eka venas karanna nae.",
-  //   expected: "ඔය එහෙම හිතන්නෙ එපා අපි meeting එක cancel කරල නැ,හැබැයි දැන් plan එක වෙනස් කරන්න නැ"
-  // },
-  // {
-  //   id: "Pos_18",
-  //   description: "Convert Singlish text with pronoun variation and cleared lines",
-  //   input: "mama hithanne nae mehema karana eka hari kiyala, mokadha mama dhannava mama karapu dhe hari nae kiyala.oya nam ehema hithanne nae kiyala api hodhata dhannava, mokadha oyaa situation eka therum gannava.",
-  //   expected: "මම හිතන්නෙ නැ මෙහෙම කරන එක හරි කියල, මොකද මම දන්නව මම කරපු දෙ හරි නැ කියල.ඔය නම් එහෙම හිතන්නෙ නැ කියල අපි හොදට දන්නව, මොකද ඔයා situation එක තෙරුම් ගන්නව."
-  // },
-  // {
-  //   id: "Pos_19",
-  //   description: "Convert Singlish compound sentence with punctuation and numbers",
-  //   input: "oyata 2 veni bus eka miss una  namuth 3ta meeting eka start venne kiyala manager kivva, ee nisa hurry up venna oona, hari nedha?",
-  //   expected: "ඔයට 2 වෙනි bus එක miss උන  නමුත් 3ට meeting එක start වෙන්නෙ කියල manager කිව්ව, ඒ නිස hurry up වෙන්න ඕන, හරි නේද??"
-  // },
-  // {
-  //   id: "Pos_20",
-  //   description: "Convert Singlish text with phrase patterns and plural forms",
-  //   input: "api kalin meetings okkoma plan karala thibba vidhihakata, daily reports, weekly updates saha monthly reviews okkoma on time submit karanavaa kiyala decision eka gaththa. namuth, team members la okkoma rules follow karanne nae, habits venas karanna time gannava kiyala api dhannava. ehema nisa future plans, new ideas saha backup options okkoma ready karala thiyaganna oona kiyala api hithanavaa.",
-  //   expected: "අපි කලින් meetings ඔක්කොම plan කරල තිබ්බ විදිහකට, daily reports, weekly updates සහ monthly reviews ඔක්කොම on time submit කරනවා කියල decision එක ගත්ත. නමුත්, team members ල ඔක්කොම rules follow කරන්නේ නැ, habits වෙනස් කරන්න time ගන්නව කියල අපි දන්නව. එහෙම නිස future plans, new ideas සහ backup options ඔක්කොම ready කරල තියගන්න ඕන කියල අපි හිතනවා."
-  // },
-  // {
-  //   id: "Pos_21",
-  //   description: "Convert short Singlish negation with numbers",
-  //   input: "oyaa 2ta enne nae nedha?",
-  //   expected: "ඔයා 2ට එන්නෙ නැ නේද?"
-  // },
-  // {
-  //   id: "Pos_22",
-  //   description: "Convert Singlish imperative with numbers and punctuation",
-  //   input: "oyaa 2ta documents print karanna, iita passe 3ta report submit karanna, hariyata check karala email send karanna.",
-  //   expected: "ඔයා 2ට documents print කරන්න, ඊට පස්සෙ 3ට report submit කරන්න, හරියට check කරල email send කරන්න."
-  // },
-  // {
-  //   id: "Pos_23",
-  //   description: "Convert short Singlish question with cleared input",
-  //   input: "oyaa office inne naedhdha?",
-  //   expected: "ඔයා office ඉන්නේ නැද්ද?"
-  // },
-  // {
-  //   id: "Pos_24",
-  //   description: "Convert Singlish text with names and negation",
-  //   input: "oya dhaen Colombo enne naedhdha, namuth ramesh kalin flight ekata giya nae, e nisa api plan karapu meeting eka postpone karanna one, mokadha attendees la okkoma ready nae.",
-  //   expected: "ඔය දැන් Colombo එන්නෙ නැද්ද, නමුත් රමෙශ් කලින් flight එකට ගිය නැ, එ නිස අපි plan කරපු meeting එක postpone කරන්න one, මොකද attendees ල ඔක්කොම ready නැ."
-  // }
-
+  {
+    id: "Pos_8",
+    description: "Convert sentence with numbers and system terms",
+    input: "mama adha 3 veni paarata try kala namuth system eka hariyata respond une nae",
+    expected: "මම අද 3 වෙනි පාරට try කල නමුත් system එක හරියට respond උනෙ නැ"
+  },
+  {
+    id: "Pos_9",
+    description: "Convert multiline paragraph input",
+    input: "mama report eka hadhanava.oya data tika check karanava.api heta meeting eka thiyenava.",
+    expected: "මම report එක හදනව.ඔය data ටික check කරනව.අපි හෙට meeting එක තියෙනව."
+  },
+  {
+    id: "Pos_10",
+    description: "Convert sentence with plural nouns",
+    input: "students laa tika reports liyala submit karala thiyenava",
+    expected: "students ලා ටික reports ලියල submit කරල තියෙනව"
+  },
+  {
+    id: "Pos_11",
+    description: "Convert long daily-use sentence",
+    input: "adha udhe mama gedharin eliyata yanna kalin breakfast eka kanna amathaka unaa",
+    expected: "අද උදෙ මම ගෙදරින් එලියට යන්න කලින් breakfast එක කන්න අමතක උනා"
+  },
+  {
+    id: "Pos_12",
+    description: "Convert short phrase-pattern command",
+    input: "data tika hariyata check karanna",
+    expected: "data ටික හරියට check කරන්න"
+  },
+  {
+    id: "Pos_13",
+    description: "Convert mixed Singlish + English compound question",
+    input: "oya adha office ekata giye naethnam, meeting ekata online join karanna puluvanda kiyala ahanna , mokadha manager kivvā attendance very important kiyala, ehema nam please mata confirm karannako mokakdha hari plan eka?",
+    expected: "ඔය අද office එකට ගියෙ නැත්නම්, meeting එකට online join කරන්න පුලුවන්ඩ කියල අහන්න , මොකද manager කිව්ව්ā attendance very important කියල, එහෙම නම් please මට confirm කරන්නකො මොකක්ද හරි plan එක?"
+  },
+  {
+    id: "Pos_14",
+    description: "Convert greeting with document confirmation request",
+    input: "ayubovan oyaata, mama evva documents tika oyaata hariyata laebunadha kiyala ahanna",
+    expected: "අයුබොවන් ඔයාට, මම එව්ව documents ටික ඔයාට හරියට ලැබුනද කියල අහන්න"
+  },
+  {
+    id: "Pos_15",
+    description: "Convert Singlish complex question with names and place",
+    input: "Kamal Colombo giyaa kiyala kivvadha?",
+    expected: "ඛමල් Colombo ගියා කියල කිව්වද?"
+  },
+  {
+    id: "Pos_16",
+    description: "Convert Singlish sentence with tenses, numbers, and punctuation",
+    input: "oyaa dhaen office yanne naee, yesterday 2 meetings thibba, haebaei heta 3ta presentation eka karanna thiyenne, ee nisaa time eka hariyata plan karanna?",
+    expected: "ඔයා දැන් office යන්නෙ නෑ, yesterday 2 meetings තිබ්බ, හැබැඉ හෙට 3ට presentation එක කරන්න තියෙන්නෙ, ඒ නිසා time එක හරියට plan කරන්න?"
+  },
+  {
+    id: "Pos_17",
+    description: "Convert Singlish text with negation and formatting",
+    input: "oya ehema hithanne epaa api meeting eka cancel karala nae,haebaei dhaen plan eka venas karanna nae.",
+    expected: "ඔය එහෙම හිතන්නෙ එපා අපි meeting එක cancel කරල නැ,හැබැයි දැන් plan එක වෙනස් කරන්න නැ"
+  },
+  {
+    id: "Pos_18",
+    description: "Convert Singlish text with pronoun variation and cleared lines",
+    input: "mama hithanne nae mehema karana eka hari kiyala, mokadha mama dhannava mama karapu dhe hari nae kiyala.oya nam ehema hithanne nae kiyala api hodhata dhannava, mokadha oyaa situation eka therum gannava.",
+    expected: "මම හිතන්නෙ නැ මෙහෙම කරන එක හරි කියල, මොකද මම දන්නව මම කරපු දෙ හරි නැ කියල.ඔය නම් එහෙම හිතන්නෙ නැ කියල අපි හොදට දන්නව, මොකද ඔයා situation එක තෙරුම් ගන්නව."
+  },
+  {
+    id: "Pos_19",
+    description: "Convert Singlish compound sentence with punctuation and numbers",
+    input: "oyata 2 veni bus eka miss una  namuth 3ta meeting eka start venne kiyala manager kivva, ee nisa hurry up venna oona, hari nedha?",
+    expected: "ඔයට 2 වෙනි bus එක miss උන  නමුත් 3ට meeting එක start වෙන්නෙ කියල manager කිව්ව, ඒ නිස hurry up වෙන්න ඕන, හරි නේද?"
+    },
+  {
+    id: "Pos_20",
+    description: "Convert Singlish text with phrase patterns and plural forms",
+    input: "api kalin meetings okkoma plan karala thibba vidhihakata, daily reports, weekly updates saha monthly reviews okkoma on time submit karanavaa kiyala decision eka gaththa. namuth, team members la okkoma rules follow karanne nae, habits venas karanna time gannava kiyala api dhannava. ehema nisa future plans, new ideas saha backup options okkoma ready karala thiyaganna oona kiyala api hithanavaa.",
+    expected: "අපි කලින් meetings ඔක්කොම plan කරල තිබ්බ විදිහකට, daily reports, weekly updates සහ monthly reviews ඔක්කොම on time submit කරනවා කියල decision එක ගත්ත. නමුත්, team members ල ඔක්කොම rules follow කරන්නේ නැ, habits වෙනස් කරන්න time ගන්නව කියල අපි දන්නව. එහෙම නිස future plans, new ideas සහ backup options ඔක්කොම ready කරල තියගන්න ඕන කියල අපි හිතනවා."
+  },
+  {
+    id: "Pos_21",
+    description: "Convert short Singlish negation with numbers",
+    input: "oyaa 2ta enne nae nedha?",
+    expected: "ඔයා 2ට එන්නෙ නැ නේද?"
+  },
+  {
+    id: "Pos_22",
+    description: "Convert Singlish imperative with numbers and punctuation",
+    input: "oyaa 2ta documents print karanna, iita passe 3ta report submit karanna, hariyata check karala email send karanna.",
+    expected: "ඔයා 2ට documents print කරන්න, ඊට පස්සෙ 3ට report submit කරන්න, හරියට check කරල email send කරන්න."
+  },
+  {
+    id: "Pos_23",
+    description: "Convert short Singlish question with cleared input",
+    input: "oyaa office inne naedhdha?",
+    expected: "ඔයා office ඉන්නේ නැද්ද?"
+  },
+  {
+    id: "Pos_24",
+    description: "Convert Singlish text with names and negation",
+    input: "oya dhaen Colombo enne naedhdha, namuth ramesh kalin flight ekata giya nae, e nisa api plan karapu meeting eka postpone karanna one, mokadha attendees la okkoma ready nae.",
+    expected: "ඔය දැන් Colombo එන්නෙ නැද්ද, නමුත් රමෙශ් කලින් flight එකට ගිය නැ, එ නිස අපි plan කරපු meeting එක postpone කරන්න one, මොකද attendees ල ඔක්කොම ready නැ."
+  }
 ];
 
 // // // NEGATIVE TEST DATA

@@ -118,27 +118,48 @@
                 - img [ref=e126]
               - button "Redo" [ref=e128] [cursor=pointer]:
                 - img [ref=e129]
-          - textbox "Input Your Singlish Text Here." [active] [ref=e132]: karunakara mee document tika review karala mata feedback eka denna puluvandha?
-          - generic [ref=e133]:
-            - button "Open File" [ref=e134] [cursor=pointer]:
-              - img [ref=e135]
-            - button "Copy" [ref=e137] [cursor=pointer]:
-              - img [ref=e138]
-            - button "Cut" [ref=e140] [cursor=pointer]:
-              - img [ref=e141]
-            - button "Paste" [ref=e143] [cursor=pointer]:
-              - img [ref=e144]
-            - button "Clear" [ref=e146] [cursor=pointer]:
-              - img [ref=e147]
-        - button "Swap Languages" [ref=e150] [cursor=pointer]:
-          - img [ref=e151]
-        - generic [ref=e153]:
-          - generic [ref=e154]: Sinhala
-          - generic [ref=e155]: කරුනකර මේ document ටික review කරල මට feedback එක ඩෙන්න පුලුවන්ද?
-          - generic [ref=e156]:
-            - button "Copy" [ref=e157] [cursor=pointer]:
-              - img [ref=e158]
-            - button "Clear" [ref=e160] [cursor=pointer]:
-              - img [ref=e161]
-      - button "Clear" [ref=e164] [cursor=pointer]: 🗑️ Clear
+          - generic [ref=e131]:
+            - textbox "Input Your Singlish Text Here." [active] [ref=e132]: oya dhaen Colombo enne naedhdha, namuth ramesh kalin flight ekata giya nae, e nisa api plan karapu meeting eka postpone karanna one, mokadha attendees la okkoma ready nae.
+            - list [ref=e134]:
+              - listitem [ref=e135] [cursor=pointer]: නැ
+              - listitem [ref=e136] [cursor=pointer]: නැණ
+              - listitem [ref=e137] [cursor=pointer]: නැඬ
+              - listitem [ref=e138] [cursor=pointer]: නැත
+              - listitem [ref=e139] [cursor=pointer]: නැන
+              - listitem [ref=e140] [cursor=pointer]: නැබ
+              - listitem [ref=e141] [cursor=pointer]: නැව
+              - listitem [ref=e142] [cursor=pointer]: නැ ක
+              - listitem [ref=e143] [cursor=pointer]: නැංග
+              - listitem [ref=e144] [cursor=pointer]: නැකත
+              - listitem [ref=e145] [cursor=pointer]: නැක්
+              - listitem [ref=e146] [cursor=pointer]: නැගි
+              - listitem [ref=e147] [cursor=pointer]: නැගී
+              - listitem [ref=e148] [cursor=pointer]: නැගූ
+              - listitem [ref=e149] [cursor=pointer]: නැඟි
+              - listitem [ref=e150] [cursor=pointer]: නැඟී
+              - listitem [ref=e151] [cursor=pointer]: නැඟේ
+              - listitem [ref=e152] [cursor=pointer]: නැටි
+              - listitem [ref=e153] [cursor=pointer]: නැති
+              - listitem [ref=e154] [cursor=pointer]: නැනෝ
+          - generic [ref=e155]:
+            - button "Open File" [ref=e156] [cursor=pointer]:
+              - img [ref=e157]
+            - button "Copy" [ref=e159] [cursor=pointer]:
+              - img [ref=e160]
+            - button "Cut" [ref=e162] [cursor=pointer]:
+              - img [ref=e163]
+            - button "Paste" [ref=e165] [cursor=pointer]:
+              - img [ref=e166]
+            - button "Clear" [ref=e168] [cursor=pointer]:
+              - img [ref=e169]
+        - button "Swap Languages" [ref=e172] [cursor=pointer]:
+          - img [ref=e173]
+        - generic [ref=e175]:
+          - generic [ref=e176]: Sinhala
+          - generic [ref=e178]:
+            - button "Copy" [ref=e179] [cursor=pointer]:
+              - img [ref=e180]
+            - button "Clear" [ref=e182] [cursor=pointer]:
+              - img [ref=e183]
+      - button "Clear" [ref=e186] [cursor=pointer]: 🗑️ Clear
 ```
