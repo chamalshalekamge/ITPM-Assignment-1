@@ -153,70 +153,70 @@ const positiveTests = [
   }
 ];
 
-// // // NEGATIVE TEST DATA
-// const negativeTests = [
-//   {
-//     id: "Neg_1",
-//     description: "Convert messy Singlish question with typos, slang, and inconsistent",
-//     input: "oyaa dhaen office enavadha?  api meeting eka postpone karannadha???  naethnam dhaenma start karannadha??",
-//     expected: "ඔයා දැන් office එනවද?  අපි meeting එක postpone කරන්නද???  නැත්නම් දැන්ම start කරන්නද??"
-//   },
-//   {
-//     id: "Neg_2",
-//     description: "Convert Singlish sentence with multiple typos",
-//     input: "mama oyaa ge office ekata yanvaa. api meeting eka postpont karanna hithuvaa.",
-//     expected: "මම ඔයා ගෙ office එකට යන්වා. අපි meeting එක පොස්ට්පොන්ඩ් කරන්න හිතුවා."
-//   },
-//   {
-//     id: "Neg_3",
-//     description: "Convert messy Singlish command with names, places, and English words",
-//     input: "hari goto Colombo kdda! call Kamal & tell hime bring th docs 2 office asap",
-//     expected: "හරි Colombo යන්න! කමල්ට call කරලා කියන්න  bring docs "
-//   },
-//   {
-//     id: "Neg_4",
-//     description: "Handle short sentence with pronoun variation, names, and messy input",
-//     input: "I m going to colombo tmr, u join?",
-//     expected: "මම හෙට කොළඹ යන්නවා, ඔබ එක්වන්නවාද?"
-//   },
-//   {
-//     id: "Neg_5",
-//     description: "Convert daily language compound sentence",
-//     input: "broo oyaata kohomadha adha, mama oyaata call karanna try karaa namuth reply ekak naethi nisaa mata hithunaa oyaa busy dha naeththan ignore karaladha kiyala",
-//     expected: "බ්‍රෝ ඔයාට කොහොමද අද, මම ඔයාට call කරන්න try කරා නමුත් reply එකක් නැති නිසා මට හිතුනා ඔයා busy ද නැත්තන් ignore කරලද කියල"
-//   },
-//   {
-//     id: "Neg_6",
-//     description: "Convert phrase pattern with negation (long input)",
-//     input: "mama oyaata kiyanna hadhanne meka nam hari vidhihak nemei, mokada mama ehema dheyak karala nathi nisaa namuth oyata hithenne mama ehema karala kiyala, ehema nemei kiyala mama kalinuth kivvaa, eth oyaata eka hariyata theerenne naea, mama oyata call karanna try nokeruvaa nevei, time eka naethi nisa vitharayi ",
-//     expected: "මම ඔයාට කියන්න හදන්නෙ මෙක නම් හරි විදිහක් නෙමේ, මොකඩ මම එහෙම දෙයක් කරල නති නිසා නමුත් ඔයට හිතෙන්නෙ මම එහෙම කරල කියල, එහෙම නෙමේ කියල මම කලිනුත් කිව්වා, එත් ඔයාට එක හරියට තේරෙන්නෙ නැඅ, මම ඔයට call කරන්න try නොකෙරුවා නේවේ, time එක නැති නිස විතරයි "
-//   },
-//   {
-//     id: "Neg_7",
-//     description: "Convert plural form with names and places",
-//     input: "Colombos office walata mails",
-//     exp,ected: "Colombo office වලට mails"
-//   },
-//   {
-//     id: "Neg_8",
-//     description: "Convert complex sentence with typographical errors",
-//     input: "mama oyataa kiyanne meeka harima confusion ekak venna puluvan dheyak, mokadha mama oyata yestarday call karanna try karaa namuth signal prblm ekak nisa call eka connect une nae",
-//     expected: "මම ඔයාට කියන්නෙ මේක හරිම confusion එකක් වෙන්න පුලුවන් දෙයක්, මොකද මම ඔයට yesterday call කරන්න try කරා නමුත් සිග්නල් ප්‍රබ්ල්ම් එකක් නිස call එක connect උනෙ නැ"
-//   },
-//   {
-//     id: "Neg_9",
-//     description : "Convert interrogative sentence with punctuation and numbers",
-//     input: "oyaata meeting eka thiyennee 25 07 2026 dhaa 9 30 ta dha naeththan 10 ta dha kiyala mata sure nae oyaata hariyatama mathaka naedhdha",
-//     expected: "ඔයාට meeting එක තියෙන්නේ 25 07 2026 දා 9 30 ට ද? නැත්තන් 10 ට ද? කියල මට sure නැ ඔයාට හරියටම මතක නැද්ද?"
-//   },
-//   {
-//     id: "Neg_10",
-//     description: "Convert formatted sentence with mixed tenses",
-//     input: "mama yesterday office giyaa adha meeting thiyenavaa heta mama late venna puluvan kiyala oyata kiyanna hithuva",
-//     expected: "මම yesterday office ගියා අද meeting තියෙනවා හෙට මම late වෙන්න පුලුවන් කියල ඔයට කියන්න හිතුව"
-//   },
+// NEGATIVE TEST DATA
+const negativeTests = [
+  {
+    id: "Neg_1",
+    description: "Convert messy Singlish question with typos, slang, and inconsistent",
+    input: "oyaa dhaen office enavadha?  api meeting eka postpone karannadha???  naethnam dhaenma start karannadha??",
+    expected: "ඔයා දැන් office එනවද?  අපි meeting එක postpone කරන්නද???  නැත්නම් දැන්ම start කරන්නද??"
+  },
+  {
+    id: "Neg_2",
+    description: "Convert Singlish sentence with multiple typos",
+    input: "mama oyaa ge office ekata yanvaa. api meeting eka postpont karanna hithuvaa.",
+    expected: "මම ඔයා ගෙ office එකට යන්වා. අපි meeting එක පොස්ට්පොන්ඩ් කරන්න හිතුවා."
+  },
+  {
+    id: "Neg_3",
+    description: "Convert messy Singlish command with names, places, and English words",
+    input: "hari goto Colombo kdda! call Kamal & tell hime bring th docs 2 office asap",
+    expected: "හරි Colombo යන්න! කමල්ට call කරලා කියන්න  bring docs "
+  },
+  {
+    id: "Neg_4",
+    description: "Handle short sentence with pronoun variation, names, and messy input",
+    input: "I m going to colombo tmr, u join?",
+    expected: "මම හෙට කොළඹ යන්නවා, ඔබ එක්වන්නවාද?"
+  },
+  {
+    id: "Neg_5",
+    description: "Convert daily language compound sentence",
+    input: "broo oyaata kohomadha adha, mama oyaata call karanna try karaa namuth reply ekak naethi nisaa mata hithunaa oyaa busy dha naeththan ignore karaladha kiyala",
+    expected: "බ්‍රෝ ඔයාට කොහොමද අද, මම ඔයාට call කරන්න try කරා නමුත් reply එකක් නැති නිසා මට හිතුනා ඔයා busy ද නැත්තන් ignore කරලද කියල"
+  },
+  {
+    id: "Neg_6",
+    description: "Convert phrase pattern with negation (long input)",
+    input: "mama oyaata kiyanna hadhanne meka nam hari vidhihak nemei, mokada mama ehema dheyak karala nathi nisaa namuth oyata hithenne mama ehema karala kiyala, ehema nemei kiyala mama kalinuth kivvaa, eth oyaata eka hariyata theerenne naea, mama oyata call karanna try nokeruvaa nevei, time eka naethi nisa vitharayi ",
+    expected: "මම ඔයාට කියන්න හදන්නෙ මෙක නම් හරි විදිහක් නෙමේ, මොකඩ මම එහෙම දෙයක් කරල නති නිසා නමුත් ඔයට හිතෙන්නෙ මම එහෙම කරල කියල, එහෙම නෙමේ කියල මම කලිනුත් කිව්වා, එත් ඔයාට එක හරියට තේරෙන්නෙ නැඅ, මම ඔයට call කරන්න try නොකෙරුවා නේවේ, time එක නැති නිස විතරයි "
+  },
+  {
+    id: "Neg_7",
+    description: "Convert plural form with names and places",
+    input: "Colombos office walata mails",
+    exp,ected: "Colombo office වලට mails"
+  },
+  {
+    id: "Neg_8",
+    description: "Convert complex sentence with typographical errors",
+    input: "mama oyataa kiyanne meeka harima confusion ekak venna puluvan dheyak, mokadha mama oyata yestarday call karanna try karaa namuth signal prblm ekak nisa call eka connect une nae",
+    expected: "මම ඔයාට කියන්නෙ මේක හරිම confusion එකක් වෙන්න පුලුවන් දෙයක්, මොකද මම ඔයට yesterday call කරන්න try කරා නමුත් සිග්නල් ප්‍රබ්ල්ම් එකක් නිස call එක connect උනෙ නැ"
+  },
+  {
+    id: "Neg_9",
+    description : "Convert interrogative sentence with punctuation and numbers",
+    input: "oyaata meeting eka thiyennee 25 07 2026 dhaa 9 30 ta dha naeththan 10 ta dha kiyala mata sure nae oyaata hariyatama mathaka naedhdha",
+    expected: "ඔයාට meeting එක තියෙන්නේ 25 07 2026 දා 9 30 ට ද? නැත්තන් 10 ට ද? කියල මට sure නැ ඔයාට හරියටම මතක නැද්ද?"
+  },
+  {
+    id: "Neg_10",
+    description: "Convert formatted sentence with mixed tenses",
+    input: "mama yesterday office giyaa adha meeting thiyenavaa heta mama late venna puluvan kiyala oyata kiyanna hithuva",
+    expected: "මම yesterday office ගියා අද meeting තියෙනවා හෙට මම late වෙන්න පුලුවන් කියල ඔයට කියන්න හිතුව"
+  },
 
-// ];
+];
 
 // POSITIVE TEST EXECUTION
 for (const data of positiveTests) {
@@ -241,24 +241,24 @@ for (const data of positiveTests) {
 }
 
 
-// // NEGATIVE TEST EXECUTION
-// for (const data of negativeTests) {
-//   test(`Negative | ${data.id} | ${data.description}`, async ({ page }) => {
+// NEGATIVE TEST EXECUTION
+for (const data of negativeTests) {
+  test(`Negative | ${data.id} | ${data.description}`, async ({ page }) => {
 
-//     const inputBox = page.locator('textarea[placeholder*="Singlish"]');
-//     const outputBox = page.locator(
-//       '.w-full.h-80.p-3.rounded-lg.ring-1.ring-slate-300.whitespace-pre-wrap.overflow-y-auto.flex-grow.bg-slate-50'
-//     );
+    const inputBox = page.locator('textarea[placeholder*="Singlish"]');
+    const outputBox = page.locator(
+      '.w-full.h-80.p-3.rounded-lg.ring-1.ring-slate-300.whitespace-pre-wrap.overflow-y-auto.flex-grow.bg-slate-50'
+    );
 
-//     await inputBox.fill(data.input);
-//     await page.waitForTimeout(5000);
+    await inputBox.fill(data.input);
+    await page.waitForTimeout(5000);
 
-//     const actualOutput = await outputBox.textContent();
+    const actualOutput = await outputBox.textContent();
 
-//     console.log(`NEGATIVE TEST: ${data.id}`);
-//     console.log(`Expected: ${data.expected}`);
-//     console.log(`Actual: ${actualOutput}`);
+    console.log(`NEGATIVE TEST: ${data.id}`);
+    console.log(`Expected: ${data.expected}`);
+    console.log(`Actual: ${actualOutput}`);
 
-//     expect(actualOutput).toContain(data.expected);
-//   });
-// }
+    expect(actualOutput).toContain(data.expected);
+  });
+}
